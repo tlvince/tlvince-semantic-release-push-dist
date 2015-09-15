@@ -2,7 +2,7 @@
 set -e
 
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
-mv dist/* deploy
+mv dist/* deploy/dist
 cd deploy
 git add .
 git config user.email "tlvince-bot@tlvince.com"
