@@ -7,6 +7,6 @@ cd deploy
 git add .
 git config user.email "tlvince-bot@tlvince.com"
 git config user.name "tlvince bot"
-git commit --all --message "$npm_package_version"
+git commit --all --message "chore: release $npm_package_version"
 echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 git push origin master
