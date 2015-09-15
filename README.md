@@ -22,7 +22,7 @@ Pro tip: add `scripts/deploy.sh` to your `.npmignore`.
 
 ## Author
 
-© Tom Vincent <github@tlvince.com> (https://tlvince.com)
+© 2015 Tom Vincent <github@tlvince.com> (https://tlvince.com)
 
 ## License
 
