@@ -20,6 +20,8 @@ this account) and add it as a collaborator (with push access) to your repo.
 
 Pro tip: add `scripts/deploy.sh` to your `.npmignore`.
 
+[scripts/deploy.sh]: scripts/deploy.sh
+
 ## Author
 
 © 2015 Tom Vincent <github@tlvince.com> (https://tlvince.com)
