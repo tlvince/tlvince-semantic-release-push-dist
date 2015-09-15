@@ -15,10 +15,10 @@ Want semantic-release to build and commit dist? Here's one approach:
 
 That's it!
 
-Pro tip: create a machine/bot account on GitHub (generate a access token for
-this account) and add it as a collaborator (with push access) to your repo.
+**Pro tip**: create a machine/bot account on GitHub (generate a access token
+for this account) and add it as a collaborator (with push access) to your repo.
 
-Pro tip: add `scripts/deploy.sh` to your `.npmignore`.
+**Pro tip**: add `scripts/deploy.sh` to your `.npmignore`.
 
 [scripts/deploy.sh]: scripts/deploy.sh
 
