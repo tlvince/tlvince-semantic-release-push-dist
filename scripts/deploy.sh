@@ -2,9 +2,9 @@
 set -e
 
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
-mv dist/* deploy/dist
+cp -R dist/* deploy/dist
 cd deploy
-git add .
+git add dist
 git config user.email "tlvince-bot@tlvince.com"
 git config user.name "tlvince bot"
 git commit --all --message "chore: release $npm_package_version"
