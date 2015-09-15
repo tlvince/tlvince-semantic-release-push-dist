@@ -9,11 +9,13 @@ Want semantic-release to build and commit dist? Here's one approach:
 3. Run `travis env set CI_USER_TOKEN [token]`
 4. Add a npm build script that's suitable for your project
 5. Copy [scripts/deploy.sh][] into your project and adjust it for your needs
-6. Add this to as a npm deploy script
+6. Add it as an npm deploy script
 7. Add a predeploy script that runs the npm build script
 8. Call `npm run deploy` after `semantic-release pre`
 
 That's it!
+
+See this repository as a working example.
 
 **Pro tip**: create a machine/bot account on GitHub (generate a access token
 for this account) and add it as a collaborator (with push access) to your repo.
