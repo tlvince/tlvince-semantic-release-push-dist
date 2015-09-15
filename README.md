@@ -2,7 +2,7 @@
 
 > Reduced test case for committing dist with semantic-release
 
-Want semantic-release to commit a build? Here's one approach:
+Want semantic-release to build and commit dist? Here's one approach:
 
 1. Initialise semantic-release with your repo as normal
 2. Generate a new GitHub access token (only repo/public_repo scope is required)
