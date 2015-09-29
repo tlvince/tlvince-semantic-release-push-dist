@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-head="chore: rebuild"
+subject="chore: rebuild"
 body="Auto committed by a semantic-release hook"
 
-commit="$(git show --no-patch --format="%aB" HEAD)"
-[[ "$commit" == "$head\n\n$body" ]] && { echo "Running semantic-release"; exit; }
+last_subject="$(git show --no-patch --format="%s" HEAD)"
+last_body="$(git show --no-patch --format="%b" HEAD)"
+[[ "$last_subject" == "$subject" && "$last_body" == "$body" ]] && {
+  echo "The last commit looks like it was commited by the deploy hook"
+  echo "Proceeding semantic-release"
+  exit
+}
 
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
 cp -R dist/* deploy/dist
