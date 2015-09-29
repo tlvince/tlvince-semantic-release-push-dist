@@ -3,7 +3,7 @@
   "description": "Reduced test case for committing dist with semantic-release",
   "main": "index.js",
   "scripts": {
-    "commit-dist": "git commit -i dist -m 'chore: rebuild' || true",
+    "commit-dist": "git commit -i dist -m 'chore: rebuild' && exit 1",
     "prebuild": "rm -rf dist && mkdir -p dist",
     "build": "date > dist/dist.txt",
     "predeploy": "npm run build",
@@ -27,7 +27,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-push": "npm run build && npm run commit-dist"
+      "pre-push": "npm run build && npm run commit-dist || git push"
     }
   }
 }
