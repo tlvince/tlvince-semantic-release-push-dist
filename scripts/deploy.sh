@@ -10,7 +10,7 @@ error() { echo "$0: $1"; exit 1; }
 
 bot_email="tlvince-bot@tlvince.com"
 last_email="$(git show --no-patch --format="%aE" HEAD)"
-[[ "$last_email" == "$bot_email" ]] && error "Last commit by bot"
+[[ "$last_email" == "$bot_email" ]] && exit
 
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
 cp -R dist/* deploy/dist
