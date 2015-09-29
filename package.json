@@ -3,7 +3,6 @@
   "description": "Reduced test case for committing dist with semantic-release",
   "main": "index.js",
   "scripts": {
-    "commit-dist": "git commit -i dist -m 'chore: rebuild' && exit 1",
     "prebuild": "rm -rf dist && mkdir -p dist",
     "build": "date > dist/dist.txt",
     "predeploy": "npm run build",
@@ -22,12 +21,6 @@
   },
   "homepage": "https://github.com/tlvince/tlvince-semantic-release-push-dist",
   "devDependencies": {
-    "ghooks": "^0.3.2",
     "semantic-release": "^4.3.4"
-  },
-  "config": {
-    "ghooks": {
-      "pre-push": "npm run build && npm run commit-dist || git push"
-    }
   }
 }
