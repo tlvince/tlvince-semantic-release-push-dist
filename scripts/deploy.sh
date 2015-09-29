@@ -18,7 +18,7 @@ cd deploy
 git add dist
 git config user.email "tlvince-bot@tlvince.com"
 git config user.name "tlvince bot"
-git commit --all --message "$head" --message "$body"
+git commit --all --message "$subject" --message "$body"
 echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 git push origin master
 cd -
