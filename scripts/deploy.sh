@@ -18,7 +18,7 @@ cd deploy
 git add dist
 git config user.email "$bot_email"
 git config user.name "tlvince bot"
-git commit --all --message "chore: release $npm_package_version"
+git commit --all --message "chore: rebuild"
 echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 git push origin master
 cd -
