@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
 cp -R dist/* deploy/dist
