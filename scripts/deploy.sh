@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+error() { echo "$0: $1"; exit 1; }
+
+[[ "$TRAVIS" ]] || error "Not running in Travis"
+[[ "$TRAVIS_PULL_REQUEST" == "false" ]] || error "Not publishing pull requests"
+[[ "$TRAVIS_BRANCH" == "master" ]] || error "Not in the master branch"
+[[ "$TRAVIS_REPO_SLUG" == "tlvince/tlvince-semantic-release-push-dist" ]] || {
+  error "Not publishing in forks"
+}
+
 git clone https://github.com/tlvince/tlvince-semantic-release-push-dist.git deploy
 cp -R dist/* deploy/dist
 cd deploy
