@@ -27,7 +27,7 @@
   },
   "config": {
     "ghooks": {
-      "post-commit": "npm run build && npm run commit-dist"
+      "pre-push": "npm run build && npm run commit-dist"
     }
   }
 }
