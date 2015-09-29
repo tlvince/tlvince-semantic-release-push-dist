@@ -23,3 +23,4 @@ echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 git push origin master
 cd -
 rm -rf deploy
+exit 1
