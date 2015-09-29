@@ -3,11 +3,6 @@ set -euo pipefail
 
 error() { echo "$0: $1"; exit 1; }
 
-[[ "$TRAVIS" ]] || error "Not running in Travis"
-[[ "$TRAVIS_PULL_REQUEST" == "false" ]] || error "Not publishing pull requests"
-[[ "$TRAVIS_BRANCH" == "master" ]] || error "Not in the master branch"
-[[ "$TRAVIS_REPO_SLUG" == "tlvince/tlvince-semantic-release-push-dist" ]] || error "Not publishing forks"
-
 bot_email="tlvince-bot@tlvince.com"
 last_email="$(git show --no-patch --format="%aE" HEAD)"
 [[ "$last_email" == "$bot_email" ]] && { echo "Running semantic-release"; exit; }
