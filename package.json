@@ -6,7 +6,6 @@
     "prebuild": "rm -rf dist && mkdir -p dist",
     "build": "date > dist/dist.txt",
     "deploy": "publish-dist --author-name 'tlvince-bot' --author-email 'tlvince-bot@tlvince.com'",
-    "prepublish": "npm run build && npm run publish-dist",
     "test": "exit",
     "semantic-release": "semantic-release pre && npm deploy && npm publish && semantic-release post"
   },
