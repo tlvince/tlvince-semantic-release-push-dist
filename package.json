@@ -5,7 +5,8 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir -p dist",
     "build": "date > dist/dist.txt",
-    "prepublish": "npm run build && npm run publish-dist",
+    "dist": "npm run publish-dist -- --author-name 'tlvince-bot' --author-email 'tlvince-bot@tlvince.com'",
+    "prepublish": "npm run build && npm run dist",
     "test": "exit",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
