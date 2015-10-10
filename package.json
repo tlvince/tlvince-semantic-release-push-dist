@@ -23,6 +23,5 @@
   "devDependencies": {
     "publish-dist": "1.0.6",
     "semantic-release": "^4.3.4"
-  },
-  "version": "1.0.24"
+  }
 }
